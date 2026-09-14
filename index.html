@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="video">
+        <video class="video__player" src="./video/Sita Sings the Blues [480p].mp4"></video>
+        <div class="video__options">
+            <button class="video__button video__button--options" id="sizeButton" data-size="auto">
+                <i class="fas fa-expand"></i> <!-- fa-compress -->
+            </button>
+            <button class="video__button video__button--options" id="chatButton">
+                <i class="far fa-comment"></i>
+            </button>
+            <button class="video__button video__button--options" id="menuButton">
+                <i class="fas fa-ellipsis-vertical"></i>
+            </button>
+        </div>
+        <div class="video__control">
+            <button class="video__button video__button--control" id="backwardButton">
+                <i class="fas fa-arrow-rotate-left"></i>
+            </button>
+            <button class="video__button video__button--player" id="playerButton">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="video__button video__button--control" id="forwardButton">
+                <i class="fas fa-arrow-rotate-right"></i>
+            </button>
+        </div>
+        <div class="video__footer">
+            <div class="video__content">
+                <div class="video__text">
+                    <h1 class="video__title">-------------</h1>
+                    <p class="video__caption">---------------</p>
+                </div>
+                <div class="video__time">
+                    <div class="video__volume" hidden>
+                        <!-- فعلا کد نویسی نمیشود :) با تشکر -->
+                        <input type="range">
+                    </div>
+                    <span class="video__currenttime">--:--:--</span>
+                    /
+                    <span class="video__duration">--:--:--</span>
+                </div>
+            </div>
+            <input type="range" class="video__timeline" value="0" min="0">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js"
+        integrity="sha512-2+f4MxT8KwN4tUzw6/hv9kxKiix603S9kmBcix+0y0dBhd6zdaPOV1Thf1DM886pFZG+cAtmshBi8UBpo6m3JA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+<script src="script.js" type="module"></script>
+
+</html>
